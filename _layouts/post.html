@@ -1,0 +1,246 @@
+---
+layout: default
+disqus: false
+archive: false
+post_class: post-template
+---
+
+<!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <aside class="col-md-2 pl-0">
+        <div>
+            {% include share.html %}
+        </div>
+        </aside>
+
+        <!-- Post -->
+        {% assign author = site.authors[page.author] %}
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <header>
+            <div class="mainheading">
+
+                <div class="row post-top-meta py-6" style="background-color: #008f91;     padding-top: 50px; padding-left: 50px; padding-right: 50px;
+                padding-bottom: 40px;">
+                    <div class="col-xs-12 col-md-3 col-lg-6 text-center text-md-left mb-4 mb-md-0 text-white">
+                        In this chapter, I’ll help you get a handle on the fundamentals.
+<br /><br />
+So if you’re new to video, or want to make sure you’re on the right track, you’ll love this chapter.
+<br /><br />
+Then, in later chapters, we’ll cover advanced tips, techniques, strategies and case studies.
+<br /><br />
+But for now, let’s cover the basics of video marketing.
+                    </div>
+                    <div class="col-xs-12 col-md-3 col-lg-6 text-center text-md-left">
+                        <img style="max-width: 425.5px !important" title="Video Marketing Fundamentals" alt="Video Marketing Fundamentals" data-aspect-ratio="0.89411764705882" src="https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals.png" srcset="https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals.png 851w, https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals-300x268.png 300w, https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals-768x686.png 768w, https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals-480x429.png 480w, https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals-640x572.png 640w" sizes="(max-width: 425px) 100vw, 425px" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <!-- Author Box -->
+                {% if page.author %}
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        {% if author.avatar %}
+                        <img class="author-thumb" src="{{site.baseurl}}/{{ author.avatar }}" alt="{{ author.display_name }}">
+                        {% else %}
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a>
+                        <span class="author-description">{{ author.description }}</span>
+                    </div>
+                </div>
+                {% endif %}
+
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">{{ page.title }}</h1>
+
+            </div>
+            </header>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            {% if site.adsense == "enabled" %}
+                {% include adsense-under-header.html %}
+            {% endif %}
+            <!-- End Adsense -->
+        <div class="bg-gray-lighter" style="padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 40px;">
+            <!-- Post Featured Image -->
+            {% if page.image %}
+
+            {% if site.lazyimages == "enabled" %}
+            <img class="featured-image img-fluid lazyimg" style="text-align: -webkit-center; display: block;
+            margin-left: auto;
+            margin-right: auto;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+            {% else %}
+            <img class="featured-image img-fluid" style="text-align: -webkit-center; display: block;
+            margin-left: auto;
+            margin-right: auto;" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+            {% endif %}
+
+            {% endif %}
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <article>
+            <div class="article-post">
+                <!-- Toc if any -->
+                {% if page.toc %}
+                    {% if page.beforetoc %}
+                        <p><em>{{page.beforetoc}}</em></p>
+                    {% endif %}
+                    <div class="toc mt-4 mb-4 lead">
+                        <h3 class="font-weight-bold">Summary</h3>
+                        {% include toc.html html=content %}
+                    </div>
+                {% endif %}
+                <!-- End Toc -->
+                {{content}}
+            </div>
+            </article>
+
+            </div>
+<div class="boxa">
+            <div class="card" style="width: 18rem; height: 18rem; background-color: yellow;">
+                <div class="card-body">
+                  <p class="card-text"><b>Lorem ipsum dolor sit amet</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  laborum quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <b>irure dolor in reprehenderit in voluptate velit esse cillum dolore</b> eu fugiat nulla pariatur.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container" style="width: 20rem; padding-top: 40px">
+                <div class="card-deck mb-3 text-center">
+                  <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Enterprise</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>✅ 30 users included</li>
+                        <li>✅ 15 GB of storage</li>
+                        <li>✅ Phone and email support</li>
+                        <li>✅ Help center access</li>
+                      </ul>
+                      <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <br /> <br/>
+
+              <div data-min="768" class="row flex-row eh-container css-1k9xznr" style="text-align: center;"><div class="col-md-4 col-md chapter-col css-1k666gf"><p class="chapter-img eh-child"><a href="#video-marketing-fundamentals" class="scroll-click"><img src="https://api.backlinko.com/app/uploads/2019/09/chapters-video-marketing-fundamentals.png" alt="off-page-seo-fundamentals" width="214" height="214" loading="lazy" class="size-full aligncenter"></a></p><h6><a href="#video-marketing-fundamentals" class="scroll-click">Chapter 1</a></h6><p><a href="#video-marketing-fundamentals" class="scroll-click">Video Marketing Fundamentals</a></p></div><div class="col-md-4 col-md chapter-col css-1k666gf"><p class="chapter-img eh-child"><a href="#video-content-templates" class="scroll-click"><img src="https://api.backlinko.com/app/uploads/2019/09/chapters-proven-video-content-templates.png" alt="off-page-seo-fundamentals" width="214" height="214" loading="lazy" class="size-full aligncenter"></a></p><h6><a href="#video-content-templates" class="scroll-click">Chapter 2</a></h6><p><a href="#video-content-templates" class="scroll-click">Video Content Templates</a></p></div><div class="col-md-4 col-md chapter-col css-1k666gf"><p class="chapter-img eh-child"><a href="#video-equipment-checklist" class="scroll-click"><img src="https://api.backlinko.com/app/uploads/2019/09/chapters-video-equipment-checklist.png" alt="off-page-seo-fundamentals" width="214" height="214" loading="lazy" class="size-full aligncenter"></a></p><h6><a href="#video-equipment-checklist" class="scroll-click">Chapter 3</a></h6><p><a href="#video-equipment-checklist" class="scroll-click">Video Equipment Checklist</a></p></div><div class="col-md-4 col-md chapter-col css-1k666gf"><p class="chapter-img eh-child"><a href="#how-to-make-awesome-videos" class="scroll-click"><img src="https://api.backlinko.com/app/uploads/2019/09/chapters-how-to-film-awesome-videos.png" alt="off-page-seo-fundamentals" width="214" height="214" loading="lazy" class="size-full aligncenter"></a></p><h6><a href="#how-to-make-awesome-videos" class="scroll-click">Chapter 4</a></h6><p><a href="#how-to-make-awesome-videos" class="scroll-click">How to Make Awesome Videos</a></p></div><div class="col-md-4 col-md chapter-col css-1k666gf"><p class="chapter-img eh-child"><a href="#edit-videos-like-a-pro" class="scroll-click"><img src="https://api.backlinko.com/app/uploads/2019/09/chapters-edit-videos-like-a-pro.png" alt="off-page-seo-fundamentals" width="214" height="214" loading="lazy" class="size-full aligncenter"></a></p><h6><a href="#edit-videos-like-a-pro" class="scroll-click">Chapter 5</a></h6><p><a href="#edit-videos-like-a-pro" class="scroll-click">Edit Videos Like a Pro</a></p></div><div class="col-md-4 col-md chapter-col css-1k666gf"><p class="chapter-img eh-child"><a href="#advanced-strategies" class="scroll-click"><img src="https://api.backlinko.com/app/uploads/2019/09/chapters-advanced-strategies-and-techniques.png" alt="off-page-seo-fundamentals" width="214" height="214" loading="lazy" class="size-full aligncenter"></a></p><h6><a href="#advanced-strategies" class="scroll-click">Chapter 6</a></h6><p><a href="#advanced-strategies" class="scroll-click">Advanced Strategies and Techniques</a></p></div><div class="col-md-4 col-md chapter-col css-1k666gf"><p class="chapter-img eh-child"><a href="#case-studies" class="scroll-click"><img src="https://api.backlinko.com/app/uploads/2019/09/chapters-video-marketing-case-studies.png" alt="off-page-seo-fundamentals" width="214" height="214" loading="lazy" class="size-full aligncenter"></a></p><h6><a href="#case-studies" class="scroll-click">Chapter 7</a></h6><p><a href="#case-studies" class="scroll-click">Video Marketing Case Studies</a></p></div></div>
+            <!-- Rating -->
+            {% if page.rating %}
+            <div class="rating mb-4 d-flex align-items-center">
+                <strong class="mr-1">Rating:</strong> {% include star_rating.html %}
+            </div>
+            {% endif %}
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+                {% if page.last_modified_at %}
+                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+                {% endif %}
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    {% assign sortedCategories = page.categories | sort %}
+                    {% for category in sortedCategories %}
+                    <li>
+                        <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    {% assign sortedTags = page.tags | sort %}
+                    {% for tag in sortedTags %}
+                    <li>
+                        <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            {% if page.previous.url %}
+            <a class="prev d-block col-md-6" href="{{ site.baseurl }}/{{page.previous.url}}"> &laquo; {{page.previous.title}}</a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="next d-block col-md-6 text-lg-right" href="{{ site.baseurl }}/{{page.next.url}}">{{page.next.title}} &raquo; </a>
+            {% endif %}
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+{% if page.comments != false %}
+<footer class="bg-gray-lighter" >
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                {% include disqus.html %}
+            </div>
+        </div>
+    </div>
+</footer>
+{% endif %}
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+{% if page.rating %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Thing",
+    "name": "{{ page.title }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ author.display_name }}"
+  },
+  "datePublished": "{{ page.date | date:"%Y-%m-%d" }}",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "{{ page.rating }}",
+    "bestRating": "5"
+  }
+}
+</script>
+{% endif %}
