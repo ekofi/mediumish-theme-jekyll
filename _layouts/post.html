@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: defaultp
 disqus: false
 archive: false
 post_class: post-template
@@ -7,7 +7,7 @@ post_class: post-template
 
 <!-- Begin Article
 ================================================== -->
-<div class="container">
+<div>
     <div class="row">
 
         <!-- Post Share -->
@@ -20,12 +20,13 @@ post_class: post-template
         <!-- Post -->
         {% assign author = site.authors[page.author] %}
 
-        <div class="col-md-9 flex-first flex-md-unordered">
+        <div class="flex-first flex-md-unordered">
             <header>
-            <div class="mainheading">
-
-                <div class="row post-top-meta py-6" style="background-color: #008f91;     padding-top: 50px; padding-left: 50px; padding-right: 50px;
+            <div class="mainheading" style="text-align: -webkit-center;">
+<div style="background-color: #008f91;">
+                <div class="row post-top-meta py-6"    style="max-width: 960px; padding-top: 50px; padding-left: 50px; padding-right: 50px;     justify-content: center;
                 padding-bottom: 40px;">
+                <section class="page-title pc-item css-19x684u"><div class="css-1gmiqn5 pc-item"><h2 class="css-15jiugl aasee" style="border-bottom: 1px solid rgba(0, 0, 0, 0.15); border-bottom-color: rgba(255, 255, 255, 0.2); font-size: 46px;"><strong class="strong-text">Chapter 1:</strong>Video Marketing Fundamentals</h2></div></section>
                     <div class="col-xs-12 col-md-3 col-lg-6 text-center text-md-left mb-4 mb-md-0 text-white">
                         In this chapter, I’ll help you get a handle on the fundamentals.
 <br /><br />
@@ -38,24 +39,9 @@ But for now, let’s cover the basics of video marketing.
                     <div class="col-xs-12 col-md-3 col-lg-6 text-center text-md-left">
                         <img style="max-width: 425.5px !important" title="Video Marketing Fundamentals" alt="Video Marketing Fundamentals" data-aspect-ratio="0.89411764705882" src="https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals.png" srcset="https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals.png 851w, https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals-300x268.png 300w, https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals-768x686.png 768w, https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals-480x429.png 480w, https://api.backlinko.com/app/uploads/2019/09/video-marketing-fundamentals-640x572.png 640w" sizes="(max-width: 425px) 100vw, 425px" loading="lazy" decoding="async">
                     </div>
-                </div>
+                </div></div>
 
-                <!-- Author Box -->
-                {% if page.author %}
-                <div class="row post-top-meta">
-                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
-                        {% if author.avatar %}
-                        <img class="author-thumb" src="{{site.baseurl}}/{{ author.avatar }}" alt="{{ author.display_name }}">
-                        {% else %}
-                        <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
-                        {% endif %}
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
-                        <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a>
-                        <span class="author-description">{{ author.description }}</span>
-                    </div>
-                </div>
-                {% endif %}
+                
 
                 
 
@@ -70,10 +56,13 @@ But for now, let’s cover the basics of video marketing.
                 {% include adsense-under-header.html %}
             {% endif %}
             <!-- End Adsense -->
-        <div class="bg-gray-lighter" style="padding-top: 50px;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-bottom: 40px;">
+        <div class="bg-gray-lighter" style="
+        text-align: -webkit-center;;
+    "><div style="padding-top: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 40px;" class="container">
+        
             <!-- Post Featured Image -->
             {% if page.image %}
 
@@ -91,7 +80,7 @@ But for now, let’s cover the basics of video marketing.
             <!-- End Featured Image -->
 
             <!-- Post Content -->
-            <article>
+            <article style="display: inline-block; width: 75%;">
             <div class="article-post">
                 <!-- Toc if any -->
                 {% if page.toc %}
@@ -107,10 +96,26 @@ But for now, let’s cover the basics of video marketing.
                 {{content}}
             </div>
             </article>
-
+            <!-- Author Box -->
+            {% if page.author %}
+            <div class="row post-top-meta" style="width: 75%;">
+                <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                    {% if author.avatar %}
+                    <img class="author-thumb" src="{{site.baseurl}}/{{ author.avatar }}" alt="{{ author.display_name }}">
+                    {% else %}
+                    <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
+                    {% endif %}
+                </div>
+                <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                    <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a>
+                    <span class="author-description">{{ author.description }}</span>
+                </div>
             </div>
+            {% endif %}
+
+            </div></div>
 <div class="boxa">
-            <div class="card" style="width: 18rem; height: 18rem; background-color: yellow;">
+            <div class="card" style="width: 24rem; height: 18rem; background-color: yellow;">
                 <div class="card-body">
                   <p class="card-text"><b>Lorem ipsum dolor sit amet</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  laborum quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <b>irure dolor in reprehenderit in voluptate velit esse cillum dolore</b> eu fugiat nulla pariatur.</p>
                 </div>
@@ -148,6 +153,7 @@ But for now, let’s cover the basics of video marketing.
             {% endif %}
 
             <!-- Post Date -->
+            <div style="text-align-last: center;">
             <p>
             <small>
                 <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
@@ -194,7 +200,7 @@ But for now, let’s cover the basics of video marketing.
             <div class="clearfix"></div>
             </div>
             <!-- End Categories -->
-
+        </div>
         </div>
         <!-- End Post -->
 
