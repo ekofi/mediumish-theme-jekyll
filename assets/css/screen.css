@@ -1084,7 +1084,7 @@ h2 {
 }
 @media (min-width: 540px) {
   .css-n7ab6y {
-    max-width: 540px;
+    max-width: 800px;
   }
 }
 @media (min-width: 576px) {
@@ -1139,5 +1139,22 @@ h2 {
     width: 30rem;
     height: 18rem;
     background-color: yellow;
+  }
+}
+
+.annen2 {
+  width: 58%;
+}
+
+@media (max-width: 768px) {
+  .annen2 {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  /* For tablets: */
+  .annen2 {
+    width: 80%;
   }
 }
