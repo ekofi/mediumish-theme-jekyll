@@ -1065,3 +1065,79 @@ h2 {
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+@media (min-width: 768px) {
+  .css-14kk1t5 .pc-item .container,
+  .css-14kk1t5 .entry-container {
+    max-width: 728px;
+  }
+}
+@media (min-width: 992px) {
+  .css-n7ab6y {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .css-n7ab6y {
+    max-width: 720px;
+  }
+}
+@media (min-width: 540px) {
+  .css-n7ab6y {
+    max-width: 540px;
+  }
+}
+@media (min-width: 576px) {
+  .css-n7ab6y {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+.css-n7ab6y {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .pc-item.pb {
+    padding-bottom: 3rem !important;
+  }
+}
+
+.pc-item.pb {
+  padding-bottom: 2.5rem !important;
+}
+@media (min-width: 768px) {
+  .pc-item.pt {
+    padding-top: 3rem !important;
+  }
+}
+
+.pc-item.pt {
+  padding-top: 2.5rem !important;
+}
+
+.pc-item {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.annen {
+  width: 24rem;
+  height: 18rem;
+  background-color: yellow;
+}
+@media (min-width: 768px) {
+  .annen {
+    width: 30rem;
+    height: 18rem;
+    background-color: yellow;
+  }
+}
